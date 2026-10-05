@@ -62,7 +62,7 @@ HEADERS = {
 
 WEI = 10**18
 DETAILS_MAX_AGE = timedelta(days=7)     # re-fetch details older than this
-DETAIL_REQUEST_DELAY = 1.0              # seconds between detail GETs (be polite)
+REQUEST_DELAY = 2.0                     # minimum seconds between any two msu.io API requests
 
 # --------------------------------------------------------------------------- #
 # Match conditions
@@ -143,9 +143,22 @@ log = logging.getLogger("msu-scan")
 # --------------------------------------------------------------------------- #
 # HTTP
 # --------------------------------------------------------------------------- #
+_last_request_at = 0.0
+
+
+def throttle() -> None:
+    """Sleep as needed so msu.io requests (list, details, retries) are >= REQUEST_DELAY apart."""
+    global _last_request_at
+    wait = REQUEST_DELAY - (time.monotonic() - _last_request_at)
+    if wait > 0:
+        time.sleep(wait)
+    _last_request_at = time.monotonic()
+
+
 def request_with_retries(method: str, url: str, retries: int = 3, backoff: int = 10, **kwargs):
     last_err = None
     for attempt in range(1, retries + 1):
+        throttle()
         try:
             resp = requests.request(method, url, headers=HEADERS, timeout=30, **kwargs)
             resp.raise_for_status()
@@ -313,7 +326,7 @@ def refresh_details(token_ids: list[str], cache: dict, now: datetime) -> int:
     log.info("Details: %d cached & fresh, %d to fetch", len(token_ids) - len(stale), len(stale))
 
     fetched = 0
-    for i, token_id in enumerate(stale):
+    for token_id in stale:
         try:
             detail = fetch_details(token_id)
             cache[token_id] = {
@@ -325,8 +338,6 @@ def refresh_details(token_ids: list[str], cache: dict, now: datetime) -> int:
         except Exception as err:
             # keep the old (stale) entry if there is one; we'll retry next scan
             log.error("Detail fetch failed for %s: %s", token_id, err)
-        if i < len(stale) - 1:
-            time.sleep(DETAIL_REQUEST_DELAY)
     return fetched
 
 
