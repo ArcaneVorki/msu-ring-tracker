@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ring Watch</title>
+<style>
+  :root {
+    --bg: #f6f7f9; --card: #ffffff; --text: #1b1f24; --muted: #667085; --line: #e3e6eb;
+    --accent: #2f6fed; --pot: #7a3ff2; --bonus: #0f8b6d; --new: #d9480f;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #0f1216; --card: #171b21; --text: #e8ebf0; --muted: #98a2b3; --line: #262c35;
+      --accent: #6a9bff; --pot: #a78bfa; --bonus: #3ecfa8; --new: #ff8a4c;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--bg); color: var(--text);
+    font: 15px/1.5 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  }
+  .wrap { max-width: 960px; margin: 0 auto; padding: 24px 16px 48px; }
+  h1 { font-size: 22px; margin: 0 0 4px; }
+  .sub { color: var(--muted); font-size: 13px; }
+  .bar { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin: 18px 0 14px; }
+  .chip {
+    border: 1px solid var(--line); background: var(--card); color: var(--text);
+    padding: 5px 12px; border-radius: 999px; font: inherit; font-size: 13px; cursor: pointer;
+  }
+  .chip[aria-pressed="true"] { background: var(--accent); border-color: var(--accent); color: #fff; }
+  .grid { display: grid; gap: 12px; }
+  .card {
+    background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 14px 16px;
+  }
+  .head { display: flex; flex-wrap: wrap; gap: 8px 12px; align-items: baseline; justify-content: space-between; }
+  .title { font-weight: 600; }
+  .price { font-size: 18px; font-weight: 700; font-variant-numeric: tabular-nums; }
+  .badges { display: flex; flex-wrap: wrap; gap: 6px; margin: 8px 0; }
+  .badge { font-size: 12px; padding: 2px 8px; border-radius: 6px; border: 1px solid currentColor; }
+  .badge.pot { color: var(--pot); } .badge.bonus { color: var(--bonus); } .badge.new { color: var(--new); }
+  .cols { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px 20px; margin-top: 8px; }
+  .label { font-size: 12px; text-transform: uppercase; letter-spacing: .04em; color: var(--muted); margin-bottom: 2px; }
+  .lines div { font-variant-numeric: tabular-nums; }
+  .stats { display: grid; grid-template-columns: repeat(4, auto); gap: 2px 14px; justify-content: start; font-variant-numeric: tabular-nums; }
+  .stats span:nth-child(odd) { color: var(--muted); }
+  .foot { display: flex; flex-wrap: wrap; gap: 6px 16px; justify-content: space-between; align-items: center; margin-top: 12px; color: var(--muted); font-size: 13px; }
+  a.btn {
+    background: var(--accent); color: #fff; text-decoration: none; padding: 6px 12px;
+    border-radius: 8px; font-size: 14px; font-weight: 600;
+  }
+  a.btn:hover { opacity: .9; }
+  .empty, .error { text-align: center; padding: 40px 16px; color: var(--muted); border: 1px dashed var(--line); border-radius: 12px; }
+  .error { color: var(--new); }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>Ring Watch</h1>
+  <div class="sub" id="meta">Loading…</div>
+
+  <div class="bar" id="bar" hidden>
+    <button class="chip" data-f="all" aria-pressed="true">All</button>
+    <button class="chip" data-f="pot" aria-pressed="false">Potential</button>
+    <button class="chip" data-f="bonus" aria-pressed="false">Bonus potential</button>
+  </div>
+
+  <div class="grid" id="grid"></div>
+</div>
+
+<script>
+(function () {
+  var metaEl = document.getElementById("meta");
+  var gridEl = document.getElementById("grid");
+  var barEl = document.getElementById("bar");
+  var data = null;
+  var filter = "all";
+
+  function el(tag, cls, text) {
+    var e = document.createElement(tag);
+    if (cls) e.className = cls;
+    if (text !== undefined && text !== null) e.textContent = text;
+    return e;
+  }
+  function fmtNum(n) {
+    return typeof n === "number" ? n.toLocaleString() : "-";
+  }
+  function fmtDate(iso) {
+    if (!iso) return "-";
+    var d = new Date(iso);
+    return isNaN(d) ? "-" : d.toLocaleString([], { dateStyle: "medium", timeStyle: "short" });
+  }
+  function itemUrl(m) {
+    // Only ever link to the marketplace, built from a digits-only token id.
+    return /^\d+$/.test(String(m.token_id)) ? "https://msu.io/marketplace/nft/" + m.token_id : null;
+  }
+
+  function card(m) {
+    var c = el("div", "card");
+
+    var head = el("div", "head");
+    head.appendChild(el("div", "title", "Noble Ifia's Ring #" + (m.minting_no || "?")));
+    head.appendChild(el("div", "price", fmtNum(m.price)));
+    c.appendChild(head);
+
+    var badges = el("div", "badges");
+    if (m.is_new) badges.appendChild(el("span", "badge new", "NEW"));
+    if (m.potential_match) badges.appendChild(el("span", "badge pot", "Potential: " + m.potential_match + " x3"));
+    (m.bonus_families || []).forEach(function (f) {
+      badges.appendChild(el("span", "badge bonus", "Bonus: " + f));
+    });
+    c.appendChild(badges);
+
+    var cols = el("div", "cols");
+
+    var p = el("div");
+    p.appendChild(el("div", "label", "Potential"));
+    var pl = el("div", "lines");
+    (m.potential_lines || []).forEach(function (l) { pl.appendChild(el("div", null, l)); });
+    p.appendChild(pl);
+    cols.appendChild(p);
+
+    var b = el("div");
+    b.appendChild(el("div", "label", "Bonus potential"));
+    var bl = el("div", "lines");
+    (m.bonus_lines || []).forEach(function (l) { bl.appendChild(el("div", null, l)); });
+    b.appendChild(bl);
+    cols.appendChild(b);
+
+    var s = el("div");
+    var st = m.stats || {};
+    var sf = m.starforce != null ? m.starforce + (m.max_starforce ? "/" + m.max_starforce : "") : "-";
+    s.appendChild(el("div", "label", "Stats (starforce " + sf + ")"));
+    var sg = el("div", "stats");
+    [["STR", st.str], ["DEX", st.dex], ["INT", st.int], ["LUK", st.luk],
+     ["ATT", st.pad], ["M.ATT", st.mad], ["HP", st.max_hp], ["DEF", st.pdd]].forEach(function (kv) {
+      sg.appendChild(el("span", null, kv[0]));
+      sg.appendChild(el("span", null, fmtNum(kv[1])));
+    });
+    s.appendChild(sg);
+    cols.appendChild(s);
+
+    c.appendChild(cols);
+
+    var foot = el("div", "foot");
+    foot.appendChild(el("span", null,
+      "Seller " + (m.seller || "-") + " · listed " + fmtDate(m.listed_at) + " · expires " + fmtDate(m.expires_at)));
+    var url = itemUrl(m);
+    if (url) {
+      var a = el("a", "btn", "View on MSU ↗");
+      a.href = url; a.target = "_blank"; a.rel = "noopener noreferrer";
+      foot.appendChild(a);
+    }
+    c.appendChild(foot);
+    return c;
+  }
+
+  function render() {
+    gridEl.textContent = "";
+    var list = (data.matches || []).filter(function (m) {
+      if (filter === "pot") return !!m.potential_match;
+      if (filter === "bonus") return (m.bonus_families || []).length > 0;
+      return true;
+    });
+    if (!list.length) {
+      gridEl.appendChild(el("div", "empty",
+        data.matches && data.matches.length ? "No matches for this filter." : "No matching rings in the latest scan."));
+      return;
+    }
+    list.forEach(function (m) { gridEl.appendChild(card(m)); });
+  }
+
+  barEl.addEventListener("click", function (e) {
+    var f = e.target && e.target.getAttribute && e.target.getAttribute("data-f");
+    if (!f) return;
+    filter = f;
+    Array.prototype.forEach.call(barEl.querySelectorAll(".chip"), function (c) {
+      c.setAttribute("aria-pressed", c.getAttribute("data-f") === f ? "true" : "false");
+    });
+    render();
+  });
+
+  fetch("data.json", { cache: "no-store" })
+    .then(function (r) { if (!r.ok) throw new Error("HTTP " + r.status); return r.json(); })
+    .then(function (d) {
+      data = d;
+      var n = (d.matches || []).length;
+      metaEl.textContent = "Last scan " + fmtDate(d.generated_at) + " · " + d.total_listings +
+        " listings checked · " + n + " match" + (n === 1 ? "" : "es");
+      barEl.hidden = false;
+      render();
+    })
+    .catch(function (err) {
+      metaEl.textContent = "";
+      gridEl.appendChild(el("div", "error", "Could not load scan data (" + err.message + ")."));
+    });
+})();
+</script>
+</body>
+</html>

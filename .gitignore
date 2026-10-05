@@ -1,0 +1,5 @@
+__pycache__/
+*.pyc
+*.tmp
+# generated each run and deployed by the workflow
+docs/data.json
