@@ -17776,7 +17776,7 @@
     "bonusPotential": null
   },
   "8435313645083990737399149569026": {
-    "fetched_at": "2026-10-06T18:28:00+00:00",
+    "fetched_at": "2026-10-13T22:54:07+00:00",
     "stats": {
       "cuc": 0,
       "ruc": 2,
@@ -18074,7 +18074,7 @@
     "bonusPotential": null
   },
   "8453816905561592648663092278018": {
-    "fetched_at": "2026-10-06T18:28:00+00:00",
+    "fetched_at": "2026-10-13T22:54:07+00:00",
     "stats": {
       "cuc": 0,
       "ruc": 2,
@@ -18369,7 +18369,7 @@
     }
   },
   "8281872022559104047509808317954": {
-    "fetched_at": "2026-10-06T18:28:00+00:00",
+    "fetched_at": "2026-10-13T22:54:07+00:00",
     "stats": {
       "cuc": 0,
       "ruc": 2,
@@ -18686,7 +18686,7 @@
     "bonusPotential": null
   },
   "8279851814863044724976699946498": {
-    "fetched_at": "2026-10-06T18:28:00+00:00",
+    "fetched_at": "2026-10-13T22:54:07+00:00",
     "stats": {
       "cuc": 0,
       "ruc": 2,
@@ -19019,7 +19019,7 @@
     }
   },
   "8256541783117614465194765877506": {
-    "fetched_at": "2026-10-06T18:28:00+00:00",
+    "fetched_at": "2026-10-13T22:54:07+00:00",
     "stats": {
       "cuc": 0,
       "ruc": 2,
@@ -37546,6 +37546,336 @@
       "option3": {
         "label": "ATT: +11",
         "code": 22011,
+        "grade": 2
+      }
+    }
+  },
+  "8462099761644986140191175988226": {
+    "fetched_at": "2026-10-13T22:54:07+00:00",
+    "stats": {
+      "cuc": 0,
+      "ruc": 2,
+      "levelReduced": 0,
+      "attackSpeed": -1,
+      "knockback": 0,
+      "str": {
+        "total": 5,
+        "base": 5,
+        "enhance": 0,
+        "extra": 0
+      },
+      "dex": {
+        "total": 5,
+        "base": 5,
+        "enhance": 0,
+        "extra": 0
+      },
+      "int": {
+        "total": 5,
+        "base": 5,
+        "enhance": 0,
+        "extra": 0
+      },
+      "luk": {
+        "total": 5,
+        "base": 5,
+        "enhance": 0,
+        "extra": 0
+      },
+      "maxHp": {
+        "total": 200,
+        "base": 200,
+        "enhance": 0,
+        "extra": 0
+      },
+      "maxMp": {
+        "total": 200,
+        "base": 200,
+        "enhance": 0,
+        "extra": 0
+      },
+      "pad": {
+        "total": 2,
+        "base": 2,
+        "enhance": 0,
+        "extra": 0
+      },
+      "mad": {
+        "total": 2,
+        "base": 2,
+        "enhance": 0,
+        "extra": 0
+      },
+      "recoveryHp": 0,
+      "recoveryMp": 0,
+      "senseExp": 0,
+      "willExp": 0,
+      "insightExp": 0,
+      "charismaExp": 0,
+      "charmExp": 0,
+      "craftExp": 0,
+      "level": 0
+    },
+    "starforce": {
+      "enhanced": 0,
+      "maxStarforce": 15
+    },
+    "potential": null,
+    "bonusPotential": null
+  },
+  "8461998018259112713685045924098": {
+    "fetched_at": "2026-10-13T22:54:07+00:00",
+    "stats": {
+      "cuc": 0,
+      "ruc": 2,
+      "levelReduced": 0,
+      "attackSpeed": -1,
+      "knockback": 0,
+      "str": {
+        "total": 5,
+        "base": 5,
+        "enhance": 0,
+        "extra": 0
+      },
+      "dex": {
+        "total": 5,
+        "base": 5,
+        "enhance": 0,
+        "extra": 0
+      },
+      "int": {
+        "total": 5,
+        "base": 5,
+        "enhance": 0,
+        "extra": 0
+      },
+      "luk": {
+        "total": 5,
+        "base": 5,
+        "enhance": 0,
+        "extra": 0
+      },
+      "maxHp": {
+        "total": 200,
+        "base": 200,
+        "enhance": 0,
+        "extra": 0
+      },
+      "maxMp": {
+        "total": 200,
+        "base": 200,
+        "enhance": 0,
+        "extra": 0
+      },
+      "pad": {
+        "total": 2,
+        "base": 2,
+        "enhance": 0,
+        "extra": 0
+      },
+      "mad": {
+        "total": 2,
+        "base": 2,
+        "enhance": 0,
+        "extra": 0
+      },
+      "recoveryHp": 0,
+      "recoveryMp": 0,
+      "senseExp": 0,
+      "willExp": 0,
+      "insightExp": 0,
+      "charismaExp": 0,
+      "charmExp": 0,
+      "craftExp": 0,
+      "level": 0
+    },
+    "starforce": {
+      "enhanced": 0,
+      "maxStarforce": 15
+    },
+    "potential": null,
+    "bonusPotential": null
+  },
+  "8461873669450293097162343300354": {
+    "fetched_at": "2026-10-13T22:54:07+00:00",
+    "stats": {
+      "cuc": 0,
+      "ruc": 2,
+      "levelReduced": 0,
+      "attackSpeed": -1,
+      "knockback": 0,
+      "str": {
+        "total": 5,
+        "base": 5,
+        "enhance": 0,
+        "extra": 0
+      },
+      "dex": {
+        "total": 5,
+        "base": 5,
+        "enhance": 0,
+        "extra": 0
+      },
+      "int": {
+        "total": 5,
+        "base": 5,
+        "enhance": 0,
+        "extra": 0
+      },
+      "luk": {
+        "total": 5,
+        "base": 5,
+        "enhance": 0,
+        "extra": 0
+      },
+      "maxHp": {
+        "total": 200,
+        "base": 200,
+        "enhance": 0,
+        "extra": 0
+      },
+      "maxMp": {
+        "total": 200,
+        "base": 200,
+        "enhance": 0,
+        "extra": 0
+      },
+      "pad": {
+        "total": 2,
+        "base": 2,
+        "enhance": 0,
+        "extra": 0
+      },
+      "mad": {
+        "total": 2,
+        "base": 2,
+        "enhance": 0,
+        "extra": 0
+      },
+      "recoveryHp": 0,
+      "recoveryMp": 0,
+      "senseExp": 0,
+      "willExp": 0,
+      "insightExp": 0,
+      "charismaExp": 0,
+      "charmExp": 0,
+      "craftExp": 0,
+      "level": 0
+    },
+    "starforce": {
+      "enhanced": 0,
+      "maxStarforce": 15
+    },
+    "potential": null,
+    "bonusPotential": null
+  },
+  "8258648132208923045903582568962": {
+    "fetched_at": "2026-10-13T22:54:07+00:00",
+    "stats": {
+      "cuc": 0,
+      "ruc": 2,
+      "levelReduced": 0,
+      "attackSpeed": -1,
+      "knockback": 0,
+      "str": {
+        "total": 39,
+        "base": 5,
+        "enhance": 34,
+        "extra": 0
+      },
+      "dex": {
+        "total": 39,
+        "base": 5,
+        "enhance": 34,
+        "extra": 0
+      },
+      "int": {
+        "total": 39,
+        "base": 5,
+        "enhance": 34,
+        "extra": 0
+      },
+      "luk": {
+        "total": 39,
+        "base": 5,
+        "enhance": 34,
+        "extra": 0
+      },
+      "maxHp": {
+        "total": 405,
+        "base": 200,
+        "enhance": 205,
+        "extra": 0
+      },
+      "maxMp": {
+        "total": 200,
+        "base": 200,
+        "enhance": 0,
+        "extra": 0
+      },
+      "pad": {
+        "total": 2,
+        "base": 2,
+        "enhance": 0,
+        "extra": 0
+      },
+      "pdd": {
+        "total": 14,
+        "base": 0,
+        "enhance": 14,
+        "extra": 0
+      },
+      "mad": {
+        "total": 2,
+        "base": 2,
+        "enhance": 0,
+        "extra": 0
+      },
+      "recoveryHp": 0,
+      "recoveryMp": 0,
+      "senseExp": 0,
+      "willExp": 0,
+      "insightExp": 0,
+      "charismaExp": 0,
+      "charmExp": 0,
+      "craftExp": 0,
+      "level": 0
+    },
+    "starforce": {
+      "enhanced": 13,
+      "maxStarforce": 15
+    },
+    "potential": {
+      "option1": {
+        "label": "All Stats: +9%",
+        "code": 40086,
+        "grade": 4
+      },
+      "option2": {
+        "label": "All Stats: +6%",
+        "code": 30086,
+        "grade": 3
+      },
+      "option3": {
+        "label": "All Stats: +6%",
+        "code": 30086,
+        "grade": 3
+      }
+    },
+    "bonusPotential": {
+      "option1": {
+        "label": "ATT: +12",
+        "code": 32011,
+        "grade": 3
+      },
+      "option2": {
+        "label": "STR: +4%",
+        "code": 22041,
+        "grade": 2
+      },
+      "option3": {
+        "label": "STR: +14",
+        "code": 22001,
         "grade": 2
       }
     }
