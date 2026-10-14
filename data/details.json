@@ -38666,5 +38666,78 @@
     },
     "potential": null,
     "bonusPotential": null
+  },
+  "8462034393309915747113423077378": {
+    "fetched_at": "2026-10-14T21:47:32+00:00",
+    "stats": {
+      "cuc": 0,
+      "ruc": 2,
+      "levelReduced": 0,
+      "attackSpeed": -1,
+      "knockback": 0,
+      "str": {
+        "total": 5,
+        "base": 5,
+        "enhance": 0,
+        "extra": 0
+      },
+      "dex": {
+        "total": 5,
+        "base": 5,
+        "enhance": 0,
+        "extra": 0
+      },
+      "int": {
+        "total": 5,
+        "base": 5,
+        "enhance": 0,
+        "extra": 0
+      },
+      "luk": {
+        "total": 5,
+        "base": 5,
+        "enhance": 0,
+        "extra": 0
+      },
+      "maxHp": {
+        "total": 200,
+        "base": 200,
+        "enhance": 0,
+        "extra": 0
+      },
+      "maxMp": {
+        "total": 200,
+        "base": 200,
+        "enhance": 0,
+        "extra": 0
+      },
+      "pad": {
+        "total": 2,
+        "base": 2,
+        "enhance": 0,
+        "extra": 0
+      },
+      "mad": {
+        "total": 2,
+        "base": 2,
+        "enhance": 0,
+        "extra": 0
+      },
+      "recoveryHp": 0,
+      "recoveryMp": 0,
+      "senseExp": 0,
+      "willExp": 0,
+      "insightExp": 0,
+      "charismaExp": 0,
+      "charmExp": 0,
+      "craftExp": 0,
+      "level": 0
+    },
+    "starforce": {
+      "enhanced": 0,
+      "maxStarforce": 15
+    },
+    "potential": null,
+    "bonusPotential": null
   }
 }
