@@ -1,0 +1,49 @@
+name: Halloween watch
+
+on:
+  schedule:
+    - cron: "*/15 * * * *"   # every 15 minutes (UTC); GitHub may delay runs by a few minutes
+  workflow_dispatch:          # run manually from the Actions tab
+
+permissions:
+  contents: write   # commit the cache files in data/
+
+concurrency:
+  group: halloween
+  cancel-in-progress: false
+
+jobs:
+  watch:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run scan
+        env:
+          DISCORD_HALLOWEEN: ${{ secrets.DISCORD_HALLOWEEN }}
+        run: python halloween_scan.py
+
+      - name: Commit updated cache
+        if: always()   # keep state even if a list request failed this run
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data
+          if git diff --cached --quiet; then
+            echo "No cache changes"
+          else
+            git commit -m "Update halloween data"
+            for i in 1 2 3; do
+              git pull --rebase && git push && break
+              sleep 5
+            done
+          fi
