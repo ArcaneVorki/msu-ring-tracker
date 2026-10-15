@@ -20,9 +20,26 @@ The site will be at `https://<your-username>.github.io/<repo-name>/`.
 
 Alerts are tracked in `data/notified.json`, so a ring that stays listed only alerts once. A ring that is delisted and later relisted alerts again. If a send fails it is retried on the next scan. Without the secret, scans run normally with no alerts, and rings that match in the meantime alert once you add it.
 
+## Halloween watch (separate, no website)
+
+`halloween_scan.py` + `.github/workflows/halloween.yml` look for the Halloween items listed in `ITEM_NAMES` every 15 minutes and alert Discord when a listing's `timedOption` has **any** of these stats at or above the minimum:
+
+| API field | Stat | Minimum |
+|---|---|---|
+| `imdr` | Ignored DEF (%) | 10 |
+| `bdr` | Boss Damage (%) | 5 |
+| `pad` | ATT | 10 |
+| `allStat` | All Stats | 20 |
+
+1. Create a Discord webhook and add it as a repo secret named **`DISCORD_HALLOWEEN`**.
+2. Run **Actions > Halloween watch > Run workflow** once to test.
+
+Each alert shows the stats that matched, when the timed option expires, the price, and a link to `https://msu.io/marketplace/nft/<tokenId>`. A listing alerts once; if it is delisted and relisted it alerts again. Edit `ITEM_NAMES` and `WANTED_STATS` at the top of `halloween_scan.py` to change what is watched. Names match exactly, or with a single-letter suffix (so "Halloween Festival" also matches "Halloween Festival A" but not "Halloween Festival Lightbulb"). State is kept in `data/halloween_cache.json` and `data/halloween_notified.json`.
+
 ## How it works
 
 - `scan.py` calls the list endpoint, then the item detail endpoint for each listing. Details are cached in `data/details.json` and only re-fetched when older than 7 days.
+- Every request to msu.io (the list call, each detail call, and any retry) waits so that at least 2 seconds pass between requests. Change `REQUEST_DELAY` in `scan.py` to adjust.
 - Matches are written to `docs/data.json`, which `docs/index.html` renders.
 - The workflow commits the `data/` cache back to the repo (so the 7-day cache survives between runs) and deploys `docs/` to Pages.
 - `data/history.csv` gets one row per listing per scan.
