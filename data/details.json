@@ -46335,7 +46335,7 @@
     }
   },
   "8251470471883406018340368128258": {
-    "fetched_at": "2026-10-16T11:34:36+00:00",
+    "fetched_at": "2026-10-23T11:48:52+00:00",
     "stats": {
       "cuc": 0,
       "ruc": 2,
@@ -60735,6 +60735,190 @@
       "option3": {
         "label": "Max HP: +60",
         "code": 2005,
+        "grade": 0
+      }
+    }
+  },
+  "8466032360248504380470349669634": {
+    "fetched_at": "2026-10-23T11:48:52+00:00",
+    "stats": {
+      "cuc": 0,
+      "ruc": 2,
+      "levelReduced": 0,
+      "attackSpeed": -1,
+      "knockback": 0,
+      "str": {
+        "total": 5,
+        "base": 5,
+        "enhance": 0,
+        "extra": 0
+      },
+      "dex": {
+        "total": 5,
+        "base": 5,
+        "enhance": 0,
+        "extra": 0
+      },
+      "int": {
+        "total": 5,
+        "base": 5,
+        "enhance": 0,
+        "extra": 0
+      },
+      "luk": {
+        "total": 5,
+        "base": 5,
+        "enhance": 0,
+        "extra": 0
+      },
+      "maxHp": {
+        "total": 200,
+        "base": 200,
+        "enhance": 0,
+        "extra": 0
+      },
+      "maxMp": {
+        "total": 200,
+        "base": 200,
+        "enhance": 0,
+        "extra": 0
+      },
+      "pad": {
+        "total": 2,
+        "base": 2,
+        "enhance": 0,
+        "extra": 0
+      },
+      "mad": {
+        "total": 2,
+        "base": 2,
+        "enhance": 0,
+        "extra": 0
+      },
+      "recoveryHp": 0,
+      "recoveryMp": 0,
+      "senseExp": 0,
+      "willExp": 0,
+      "insightExp": 0,
+      "charismaExp": 0,
+      "charmExp": 0,
+      "craftExp": 0,
+      "level": 0
+    },
+    "starforce": {
+      "enhanced": 0,
+      "maxStarforce": 15
+    },
+    "potential": null,
+    "bonusPotential": null
+  },
+  "8421041434497192618800800781058": {
+    "fetched_at": "2026-10-23T11:48:52+00:00",
+    "stats": {
+      "cuc": 0,
+      "ruc": 2,
+      "levelReduced": 0,
+      "attackSpeed": -1,
+      "knockback": 0,
+      "str": {
+        "total": 18,
+        "base": 5,
+        "enhance": 13,
+        "extra": 0
+      },
+      "dex": {
+        "total": 18,
+        "base": 5,
+        "enhance": 13,
+        "extra": 0
+      },
+      "int": {
+        "total": 18,
+        "base": 5,
+        "enhance": 13,
+        "extra": 0
+      },
+      "luk": {
+        "total": 18,
+        "base": 5,
+        "enhance": 13,
+        "extra": 0
+      },
+      "maxHp": {
+        "total": 250,
+        "base": 200,
+        "enhance": 50,
+        "extra": 0
+      },
+      "maxMp": {
+        "total": 200,
+        "base": 200,
+        "enhance": 0,
+        "extra": 0
+      },
+      "pad": {
+        "total": 2,
+        "base": 2,
+        "enhance": 0,
+        "extra": 0
+      },
+      "pdd": {
+        "total": 7,
+        "base": 0,
+        "enhance": 7,
+        "extra": 0
+      },
+      "mad": {
+        "total": 2,
+        "base": 2,
+        "enhance": 0,
+        "extra": 0
+      },
+      "recoveryHp": 0,
+      "recoveryMp": 0,
+      "senseExp": 0,
+      "willExp": 0,
+      "insightExp": 0,
+      "charismaExp": 0,
+      "charmExp": 0,
+      "craftExp": 0,
+      "level": 0
+    },
+    "starforce": {
+      "enhanced": 6,
+      "maxStarforce": 15
+    },
+    "potential": {
+      "option1": {
+        "label": "INT: +3%",
+        "code": 10043,
+        "grade": 1
+      },
+      "option2": {
+        "label": "STR: +6",
+        "code": 1,
+        "grade": 0
+      },
+      "option3": {
+        "label": "INT: +6",
+        "code": 3,
+        "grade": 0
+      }
+    },
+    "bonusPotential": {
+      "option1": {
+        "label": "Magic ATT: +10",
+        "code": 12012,
+        "grade": 1
+      },
+      "option2": {
+        "label": "DEF: +60",
+        "code": 2013,
+        "grade": 0
+      },
+      "option3": {
+        "label": "Movement Speed: +4",
+        "code": 2009,
         "grade": 0
       }
     }
