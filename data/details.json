@@ -2001,7 +2001,7 @@
     "bonusPotential": null
   },
   "8386515031929900343286207637250": {
-    "fetched_at": "2026-11-03T01:04:09+00:00",
+    "fetched_at": "2026-11-10T07:28:42+00:00",
     "stats": {
       "cuc": 0,
       "ruc": 2,
@@ -2083,13 +2083,13 @@
         "grade": 2
       },
       "option2": {
-        "label": "Max HP: +120",
-        "code": 10005,
+        "label": "LUK: +3%",
+        "code": 10044,
         "grade": 1
       },
       "option3": {
-        "label": "Max MP: +120",
-        "code": 10006,
+        "label": "STR: +3%",
+        "code": 10041,
         "grade": 1
       }
     },
@@ -5331,7 +5331,7 @@
     }
   },
   "8251971270332872879759819031810": {
-    "fetched_at": "2026-11-03T01:04:09+00:00",
+    "fetched_at": "2026-11-10T07:28:42+00:00",
     "stats": {
       "cuc": 0,
       "ruc": 2,
@@ -6108,7 +6108,7 @@
     }
   },
   "8305210796018516863765787679746": {
-    "fetched_at": "2026-11-03T01:04:09+00:00",
+    "fetched_at": "2026-11-10T07:28:42+00:00",
     "stats": {
       "cuc": 0,
       "ruc": 2,
@@ -6774,7 +6774,7 @@
     }
   },
   "8311336715894192303840007405314": {
-    "fetched_at": "2026-11-03T01:04:09+00:00",
+    "fetched_at": "2026-11-10T07:28:42+00:00",
     "stats": {
       "cuc": 0,
       "ruc": 2,
@@ -7551,7 +7551,7 @@
     }
   },
   "8381026946271841922531849501954": {
-    "fetched_at": "2026-11-03T01:04:09+00:00",
+    "fetched_at": "2026-11-10T07:28:42+00:00",
     "stats": {
       "cuc": 0,
       "ruc": 2,
@@ -9089,7 +9089,7 @@
     }
   },
   "8292899693113922492823339253506": {
-    "fetched_at": "2026-11-03T01:04:09+00:00",
+    "fetched_at": "2026-11-10T07:28:42+00:00",
     "stats": {
       "cuc": 0,
       "ruc": 2,
@@ -11753,7 +11753,7 @@
     }
   },
   "8259007335651057978708880667138": {
-    "fetched_at": "2026-11-03T01:04:09+00:00",
+    "fetched_at": "2026-11-10T07:28:42+00:00",
     "stats": {
       "cuc": 0,
       "ruc": 2,
@@ -12086,7 +12086,7 @@
     }
   },
   "8283158931582320814635793253122": {
-    "fetched_at": "2026-11-03T01:04:09+00:00",
+    "fetched_at": "2026-11-10T07:28:42+00:00",
     "stats": {
       "cuc": 0,
       "ruc": 2,
@@ -12308,7 +12308,7 @@
     }
   },
   "8251413281668329750327158636290": {
-    "fetched_at": "2026-11-03T01:04:09+00:00",
+    "fetched_at": "2026-11-10T07:28:42+00:00",
     "stats": {
       "cuc": 0,
       "ruc": 2,
@@ -14417,7 +14417,7 @@
     }
   },
   "8251411480985063836280551025666": {
-    "fetched_at": "2026-11-03T01:04:09+00:00",
+    "fetched_at": "2026-11-10T07:28:42+00:00",
     "stats": {
       "cuc": 0,
       "ruc": 2,
@@ -14826,7 +14826,7 @@
     "bonusPotential": null
   },
   "8416174671431922558037677204226": {
-    "fetched_at": "2026-10-05T14:54:21+00:00",
+    "fetched_at": "2026-11-10T07:28:42+00:00",
     "stats": {
       "cuc": 0,
       "ruc": 2,
@@ -14834,33 +14834,33 @@
       "attackSpeed": -1,
       "knockback": 0,
       "str": {
-        "total": 9,
+        "total": 18,
         "base": 5,
-        "enhance": 4,
+        "enhance": 13,
         "extra": 0
       },
       "dex": {
-        "total": 9,
+        "total": 18,
         "base": 5,
-        "enhance": 4,
+        "enhance": 13,
         "extra": 0
       },
       "int": {
-        "total": 9,
+        "total": 18,
         "base": 5,
-        "enhance": 4,
+        "enhance": 13,
         "extra": 0
       },
       "luk": {
-        "total": 9,
+        "total": 18,
         "base": 5,
-        "enhance": 4,
+        "enhance": 13,
         "extra": 0
       },
       "maxHp": {
-        "total": 210,
+        "total": 250,
         "base": 200,
-        "enhance": 10,
+        "enhance": 50,
         "extra": 0
       },
       "maxMp": {
@@ -14876,9 +14876,9 @@
         "extra": 0
       },
       "pdd": {
-        "total": 3,
+        "total": 7,
         "base": 0,
-        "enhance": 3,
+        "enhance": 7,
         "extra": 0
       },
       "mad": {
@@ -14898,18 +14898,18 @@
       "level": 0
     },
     "starforce": {
-      "enhanced": 2,
+      "enhanced": 6,
       "maxStarforce": 15
     },
     "potential": {
       "option1": {
-        "label": "Max HP: +120",
-        "code": 10005,
+        "label": "STR: +3%",
+        "code": 10041,
         "grade": 1
       },
       "option2": {
-        "label": "INT: +6",
-        "code": 3,
+        "label": "Max HP: +60",
+        "code": 5,
         "grade": 0
       },
       "option3": {
@@ -15920,7 +15920,7 @@
     }
   },
   "8345252332942196788999203144194": {
-    "fetched_at": "2026-11-03T01:04:09+00:00",
+    "fetched_at": "2026-11-10T07:28:42+00:00",
     "stats": {
       "cuc": 0,
       "ruc": 2,
@@ -35819,7 +35819,7 @@
     }
   },
   "8251431774607953070118822873090": {
-    "fetched_at": "2026-11-03T01:04:09+00:00",
+    "fetched_at": "2026-11-10T07:28:42+00:00",
     "stats": {
       "cuc": 0,
       "ruc": 2,
@@ -52314,7 +52314,7 @@
     }
   },
   "8256137468336386450443127278850": {
-    "fetched_at": "2026-11-03T01:04:09+00:00",
+    "fetched_at": "2026-11-10T07:28:42+00:00",
     "stats": {
       "cuc": 0,
       "ruc": 2,
@@ -66333,7 +66333,7 @@
     }
   },
   "8315712319006224831006546098690": {
-    "fetched_at": "2026-11-03T01:04:09+00:00",
+    "fetched_at": "2026-11-10T07:28:42+00:00",
     "stats": {
       "cuc": 0,
       "ruc": 2,
@@ -78311,7 +78311,7 @@
     "bonusPotential": null
   },
   "8447479347329482906792536374530": {
-    "fetched_at": "2026-11-02T06:23:02+00:00",
+    "fetched_at": "2026-11-10T07:28:42+00:00",
     "stats": {
       "cuc": 0,
       "ruc": 2,
@@ -79231,7 +79231,7 @@
     "bonusPotential": null
   },
   "8365550544616782309226694430210": {
-    "fetched_at": "2026-11-03T01:04:09+00:00",
+    "fetched_at": "2026-11-10T07:28:42+00:00",
     "stats": {
       "cuc": 0,
       "ruc": 2,
@@ -79897,7 +79897,7 @@
     }
   },
   "8268792371630902023321745107970": {
-    "fetched_at": "2026-11-03T01:04:09+00:00",
+    "fetched_at": "2026-11-10T07:28:42+00:00",
     "stats": {
       "cuc": 0,
       "ruc": 2,
@@ -91578,6 +91578,418 @@
         "label": "All Stats: +2%",
         "code": 22086,
         "grade": 2
+      }
+    }
+  },
+  "8404963139461783826741330549250": {
+    "fetched_at": "2026-11-10T07:28:42+00:00",
+    "stats": {
+      "cuc": 0,
+      "ruc": 2,
+      "levelReduced": 0,
+      "attackSpeed": -1,
+      "knockback": 0,
+      "str": {
+        "total": 21,
+        "base": 5,
+        "enhance": 16,
+        "extra": 0
+      },
+      "dex": {
+        "total": 21,
+        "base": 5,
+        "enhance": 16,
+        "extra": 0
+      },
+      "int": {
+        "total": 21,
+        "base": 5,
+        "enhance": 16,
+        "extra": 0
+      },
+      "luk": {
+        "total": 21,
+        "base": 5,
+        "enhance": 16,
+        "extra": 0
+      },
+      "maxHp": {
+        "total": 265,
+        "base": 200,
+        "enhance": 65,
+        "extra": 0
+      },
+      "maxMp": {
+        "total": 200,
+        "base": 200,
+        "enhance": 0,
+        "extra": 0
+      },
+      "pad": {
+        "total": 2,
+        "base": 2,
+        "enhance": 0,
+        "extra": 0
+      },
+      "pdd": {
+        "total": 8,
+        "base": 0,
+        "enhance": 8,
+        "extra": 0
+      },
+      "mad": {
+        "total": 2,
+        "base": 2,
+        "enhance": 0,
+        "extra": 0
+      },
+      "recoveryHp": 0,
+      "recoveryMp": 0,
+      "senseExp": 0,
+      "willExp": 0,
+      "insightExp": 0,
+      "charismaExp": 0,
+      "charmExp": 0,
+      "craftExp": 0,
+      "level": 0
+    },
+    "starforce": {
+      "enhanced": 7,
+      "maxStarforce": 15
+    },
+    "potential": null,
+    "bonusPotential": null
+  },
+  "8329984118159229474439031362306": {
+    "fetched_at": "2026-11-10T07:28:42+00:00",
+    "stats": {
+      "cuc": 0,
+      "ruc": 2,
+      "levelReduced": 0,
+      "attackSpeed": -1,
+      "knockback": 0,
+      "str": {
+        "total": 33,
+        "base": 5,
+        "enhance": 28,
+        "extra": 0
+      },
+      "dex": {
+        "total": 33,
+        "base": 5,
+        "enhance": 28,
+        "extra": 0
+      },
+      "int": {
+        "total": 33,
+        "base": 5,
+        "enhance": 28,
+        "extra": 0
+      },
+      "luk": {
+        "total": 33,
+        "base": 5,
+        "enhance": 28,
+        "extra": 0
+      },
+      "maxHp": {
+        "total": 355,
+        "base": 200,
+        "enhance": 155,
+        "extra": 0
+      },
+      "maxMp": {
+        "total": 200,
+        "base": 200,
+        "enhance": 0,
+        "extra": 0
+      },
+      "pad": {
+        "total": 2,
+        "base": 2,
+        "enhance": 0,
+        "extra": 0
+      },
+      "pdd": {
+        "total": 12,
+        "base": 0,
+        "enhance": 12,
+        "extra": 0
+      },
+      "mad": {
+        "total": 2,
+        "base": 2,
+        "enhance": 0,
+        "extra": 0
+      },
+      "recoveryHp": 0,
+      "recoveryMp": 0,
+      "senseExp": 0,
+      "willExp": 0,
+      "insightExp": 0,
+      "charismaExp": 0,
+      "charmExp": 0,
+      "craftExp": 0,
+      "level": 0
+    },
+    "starforce": {
+      "enhanced": 11,
+      "maxStarforce": 15
+    },
+    "potential": {
+      "option1": {
+        "label": "Max MP: +6%",
+        "code": 20046,
+        "grade": 2
+      },
+      "option2": {
+        "label": "INT: +3%",
+        "code": 10043,
+        "grade": 1
+      },
+      "option3": {
+        "label": "Max MP: +3%",
+        "code": 10046,
+        "grade": 1
+      }
+    },
+    "bonusPotential": {
+      "option1": {
+        "label": "ATT: +11",
+        "code": 22011,
+        "grade": 2
+      },
+      "option2": {
+        "label": "Max MP: +100",
+        "code": 12006,
+        "grade": 1
+      },
+      "option3": {
+        "label": "Max MP: +100",
+        "code": 12006,
+        "grade": 1
+      }
+    }
+  },
+  "8311624372277774569767455041282": {
+    "fetched_at": "2026-11-10T07:28:42+00:00",
+    "stats": {
+      "cuc": 0,
+      "ruc": 2,
+      "levelReduced": 0,
+      "attackSpeed": -1,
+      "knockback": 0,
+      "str": {
+        "total": 18,
+        "base": 5,
+        "enhance": 13,
+        "extra": 0
+      },
+      "dex": {
+        "total": 18,
+        "base": 5,
+        "enhance": 13,
+        "extra": 0
+      },
+      "int": {
+        "total": 18,
+        "base": 5,
+        "enhance": 13,
+        "extra": 0
+      },
+      "luk": {
+        "total": 18,
+        "base": 5,
+        "enhance": 13,
+        "extra": 0
+      },
+      "maxHp": {
+        "total": 250,
+        "base": 200,
+        "enhance": 50,
+        "extra": 0
+      },
+      "maxMp": {
+        "total": 200,
+        "base": 200,
+        "enhance": 0,
+        "extra": 0
+      },
+      "pad": {
+        "total": 2,
+        "base": 2,
+        "enhance": 0,
+        "extra": 0
+      },
+      "pdd": {
+        "total": 7,
+        "base": 0,
+        "enhance": 7,
+        "extra": 0
+      },
+      "mad": {
+        "total": 2,
+        "base": 2,
+        "enhance": 0,
+        "extra": 0
+      },
+      "recoveryHp": 0,
+      "recoveryMp": 0,
+      "senseExp": 0,
+      "willExp": 0,
+      "insightExp": 0,
+      "charismaExp": 0,
+      "charmExp": 0,
+      "craftExp": 0,
+      "level": 0
+    },
+    "starforce": {
+      "enhanced": 6,
+      "maxStarforce": 15
+    },
+    "potential": {
+      "option1": {
+        "label": "LUK: +6%",
+        "code": 20044,
+        "grade": 2
+      },
+      "option2": {
+        "label": "STR: +3%",
+        "code": 10041,
+        "grade": 1
+      },
+      "option3": {
+        "label": "LUK: +3%",
+        "code": 10044,
+        "grade": 1
+      }
+    },
+    "bonusPotential": {
+      "option1": {
+        "label": "LUK: +2%",
+        "code": 12044,
+        "grade": 1
+      },
+      "option2": {
+        "label": "INT: +6",
+        "code": 2003,
+        "grade": 0
+      },
+      "option3": {
+        "label": "STR: +6",
+        "code": 2001,
+        "grade": 0
+      }
+    }
+  },
+  "8251557340180875235855906118402": {
+    "fetched_at": "2026-11-10T07:28:42+00:00",
+    "stats": {
+      "cuc": 0,
+      "ruc": 2,
+      "levelReduced": 0,
+      "attackSpeed": -1,
+      "knockback": 0,
+      "str": {
+        "total": 33,
+        "base": 5,
+        "enhance": 28,
+        "extra": 0
+      },
+      "dex": {
+        "total": 33,
+        "base": 5,
+        "enhance": 28,
+        "extra": 0
+      },
+      "int": {
+        "total": 33,
+        "base": 5,
+        "enhance": 28,
+        "extra": 0
+      },
+      "luk": {
+        "total": 33,
+        "base": 5,
+        "enhance": 28,
+        "extra": 0
+      },
+      "maxHp": {
+        "total": 355,
+        "base": 200,
+        "enhance": 155,
+        "extra": 0
+      },
+      "maxMp": {
+        "total": 200,
+        "base": 200,
+        "enhance": 0,
+        "extra": 0
+      },
+      "pad": {
+        "total": 2,
+        "base": 2,
+        "enhance": 0,
+        "extra": 0
+      },
+      "pdd": {
+        "total": 12,
+        "base": 0,
+        "enhance": 12,
+        "extra": 0
+      },
+      "mad": {
+        "total": 2,
+        "base": 2,
+        "enhance": 0,
+        "extra": 0
+      },
+      "recoveryHp": 0,
+      "recoveryMp": 0,
+      "senseExp": 0,
+      "willExp": 0,
+      "insightExp": 0,
+      "charismaExp": 0,
+      "charmExp": 0,
+      "craftExp": 0,
+      "level": 0
+    },
+    "starforce": {
+      "enhanced": 11,
+      "maxStarforce": 15
+    },
+    "potential": {
+      "option1": {
+        "label": "STR: +9%",
+        "code": 30041,
+        "grade": 3
+      },
+      "option2": {
+        "label": "STR: +6%",
+        "code": 20041,
+        "grade": 2
+      },
+      "option3": {
+        "label": "STR: +6%",
+        "code": 20041,
+        "grade": 2
+      }
+    },
+    "bonusPotential": {
+      "option1": {
+        "label": "STR: +4%",
+        "code": 22041,
+        "grade": 2
+      },
+      "option2": {
+        "label": "ATT: +10",
+        "code": 12011,
+        "grade": 1
+      },
+      "option3": {
+        "label": "DEX: +2%",
+        "code": 12042,
+        "grade": 1
       }
     }
   }
